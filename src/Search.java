@@ -1,8 +1,5 @@
 public class Search {
    /*
-            4. ☐ Implement Selection Sort
-    Explanation: Select the minimum each pass and place at front.
-            Example: [64,25,12,22,11] → [11,12,22,25,64]
             5. ☐ Implement Insertion Sort
     Explanation: Insert each element into the sorted prefix.
             Example: [12,11,13,5,6] → [5,6,11,12,13]

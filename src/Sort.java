@@ -63,6 +63,15 @@ public class Sort {
         }
         return minIndex;
     }
+
+    /* 5. ☐ Implement Insertion Sort
+    Explanation: Insert each element into the sorted prefix.
+            Example: [12,11,13,5,6] → [5,6,11,12,13]*/
+
+    public static int[] insertion(int[] arr) {
+
+        return arr;
+    }
     public static void main(String[] args) {
         int[] arr = new int[]{3, 4, 2, 5, 1};
         int[] arr2 = new int[]{3, 4, 2, 5, 1, 0};

@@ -23,21 +23,62 @@ public class Sort {
         return arr;
     }
 
+    /*4. ☐ Implement Selection Sort
+    Explanation: Select the minimum each pass and place at front.
+            Example: [64,25,12,22,11] → [11,12,22,25,64]*/
+
+    public static int[] selection(int[] arr) {
+        // loop list
+        //  find min num (loop)
+        //      if curr != min num ; swap;
+        //
+        for (int i = 0; i < arr.length; i++) {
+            int min = findMin(arr, i);
+            if (arr[i] != arr[min]) {
+                swap(arr, min, i);
+            }
+        }
+        return arr;
+    }
+
     private static void swap(int[] arr, int target) {
         int temp = arr[target - 1];
         arr[target-1] = arr[target] ;
         arr[target] = temp;
     }
+    private static void swap(int[] arr, int i1, int i2) {
+        int temp = arr[i1];
+        arr[i1] = arr[i2] ;
+        arr[i2] = temp;
+    }
 
-    /*4. ☐ Implement Selection Sort
-    Explanation: Select the minimum each pass and place at front.
-            Example: [64,25,12,22,11] → [11,12,22,25,64]*/
+    private static int findMin(int[] arr, int start) {
+        int maxValue = Integer.MAX_VALUE;
+        int minIndex = 0;
+        for (int i = start; i <arr.length; i++) {
+            if (arr[i] < maxValue) {
+                maxValue = arr[i];
+                minIndex = i;
+            }
+        }
+        return minIndex;
+    }
     public static void main(String[] args) {
         int[] arr = new int[]{3, 4, 2, 5, 1};
+        int[] arr2 = new int[]{3, 4, 2, 5, 1, 0};
+
+        // Bubble Sort
         arr = bubble(arr);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+        for (int j : arr) {
+            System.out.println(j);
         }
+        System.out.println("----");
+        // SelectionSort
+        arr2 = selection(arr2);
+        for (int j : arr2 ) {
+            System.out.println(j);
+        }
+
 
     }
 }

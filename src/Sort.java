@@ -1,10 +1,10 @@
 public class Sort {
 
-    /*3. ☐ Implement Bubble Sort
-    Explanation: Swap adjacent out-of-order elements repeatedly.
-    Example: [5,1,4,2,8] → [1,2,4,5,8] */
+    /*3. ☐ Implement insertion Sort
+        Explanation: Insert each element into the sorted prefix.
+            Example: [12,11,13,5,6] → [5,6,11,12,13]*/
 
-    public static int[] bubble(int[] arr) {
+    public static int[] insertion(int[] arr) {
         //  for (i = 1)
         //      while (i < i - 1) swap(i, i - 1);
 
@@ -64,28 +64,69 @@ public class Sort {
         return minIndex;
     }
 
-    /* 5. ☐ Implement Insertion Sort
+    /* 5. ☐ Implement bubble Sort
     Explanation: Insert each element into the sorted prefix.
             Example: [12,11,13,5,6] → [5,6,11,12,13]*/
+    public static int[] bubble(int[] arr) {
+        // double sort
+            // check previous
+            // keep doing that
 
-    public static int[] insertion(int[] arr) {
+        for (int i = 0; i < arr.length; i++ ) {
+            for (int j = 1 ; j < arr.length; j++){
+                if (arr[j] < arr[j-1]) {
+                    swap(arr, j, j -1);
+                }
+            }
 
+        }
         return arr;
     }
+
+    /*6. ☐ Implement Merge Sort
+    Explanation: Divide, sort halves, and merge (O(n log n)).
+    Example: [38,27,43,3,9,82,10] → [3,9,10,27,38,43,82] */
+
+    public static int[] merge(int[] arr) {
+        // divide arr. sort halves. merge. keep dividing until 1 element per array
+        // 2d array. divide until array length cannot be divided anymore
+        int size  = arr.length;
+        int[] matrix = arr;
+
+
+        while (size > 1) {
+            size = size/2;
+            matrix
+
+        }
+        return arr;
+    }
+            /*7. ☐ Implement Quick Sort
+    Explanation: Partition around a pivot and recurse on partitions.
+    Example: [10,7,8,9,1,5] → [1,5,7,8,9,10]*/
+
+
     public static void main(String[] args) {
         int[] arr = new int[]{3, 4, 2, 5, 1};
-        int[] arr2 = new int[]{3, 4, 2, 5, 1, 0};
+       int[] arr2 = new int[]{3, 4, 2, 5, 1, 0};
+        int[] arr3 = new int[]{3, 4, 1, 2, 0};
 
-        // Bubble Sort
-        arr = bubble(arr);
+        // Insertion Sort
+        /*arr = insertion(arr);
         for (int j : arr) {
             System.out.println(j);
         }
         System.out.println("----");
-        // SelectionSort
+        // Selection Sort
         arr2 = selection(arr2);
         for (int j : arr2 ) {
             System.out.println(j);
+        }*/
+
+        // Bubble Sort
+        arr3 = bubble(arr3);
+        for (int s : arr3 ) {
+            System.out.println(s);
         }
 
 

@@ -87,7 +87,7 @@ public class Sort {
     Explanation: Divide, sort halves, and merge (O(n log n)).
     Example: [38,27,43,3,9,82,10] → [3,9,10,27,38,43,82] */
 
-    public static int[] merge(int[] arr) {
+    /*public static int[] merge(int[] arr) {
         // divide arr. sort halves. merge. keep dividing until 1 element per array
         // 2d array. divide until array length cannot be divided anymore
         int size  = arr.length;
@@ -100,12 +100,14 @@ public class Sort {
 
         }
         return arr;
-    }
+    }*/
             /*7. ☐ Implement Quick Sort
     Explanation: Partition around a pivot and recurse on partitions.
     Example: [10,7,8,9,1,5] → [1,5,7,8,9,10]*/
 
-
+    public static int[] quickSort(int[] arr) {
+        
+    }
     public static void main(String[] args) {
         int[] arr = new int[]{3, 4, 2, 5, 1};
        int[] arr2 = new int[]{3, 4, 2, 5, 1, 0};
